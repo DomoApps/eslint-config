@@ -1,5 +1,5 @@
 {
-  "name": "@appteam6/eslint-config",
+  "name": "@domoapps/eslint-config",
   "version": "1.1.0",
   "main": "src/index.js",
   "sideEffects": false,
