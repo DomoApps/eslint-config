@@ -74,9 +74,34 @@ module.exports = {
     '@typescript-eslint/prefer-for-of': 'error',
     '@typescript-eslint/unified-signatures': 'error',
     'guard-for-in': 'error',
-    '@typescript-eslint/ban-types': 'error',
-    '@typescript-eslint/camelcase': 'error',
-    '@typescript-eslint/class-name-casing': 'error',
+    '@typescript-eslint/naming-convention': [
+      'error',
+      // The `@typescript-eslint/naming-convention` rule allows `leadingUnderscore` and `trailingUnderscore` settings. However, the existing `no-underscore-dangle` rule already takes care of this.
+      {
+        selector: 'default',
+        format: ['camelCase'],
+      },
+      // Airbnb recommends PascalCase for classes (23.3), and although Airbnb does not make TypeScript recommendations, we are assuming this rule would similarly apply to anything "type like", including interfaces, type aliases, and enums.
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+      },
+      // Allow UPPER_CASE for variables to cater for 23.10
+      {
+        selector: 'variable',
+        format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+      },
+      // Allow any naming convention for properties, because (1) Airbnb does not specify any naming conventions for properties (2) The `camelcase` rule specifically disables checking properties: https://github.com/airbnb/javascript/blob/06b3ab11d9a443ff46f052dd00375e271e5146e6/packages/eslint-config-airbnb-base/rules/style.js#L24
+      {
+        selector: 'property',
+        format: null,
+      },
+      // Allow any naming convention for enum members, because Airbnb has no recommendation
+      {
+        selector: 'enumMember',
+        format: null,
+      },
+    ],
     '@typescript-eslint/no-for-in-array': 'error',
     'no-restricted-imports': ['error', 'rxjs', 'lodash'],
     'no-caller': 'error',
@@ -85,7 +110,6 @@ module.exports = {
     'no-console': 'warn',
     'no-debugger': 'warn',
     'constructor-super': 'error',
-    'no-shadow-restricted-names': 'error',
     'no-empty': 'error',
     'no-shadow': 'error',
     'no-sparse-arrays': 'error',
@@ -94,7 +118,6 @@ module.exports = {
     '@typescript-eslint/restrict-plus-operands': 'error',
     'use-isnan': 'error',
     'arrow-body-style': 'error',
-    '@typescript-eslint/interface-name-prefix': ['error', 'never'],
     'new-parens': 'error',
     // TODO: when released, enable this rule
     // '@typescript-eslint/consistent-type-assertions': ['error', { assertionStyle: 'as' }],
