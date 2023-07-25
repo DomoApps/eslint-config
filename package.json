@@ -1,6 +1,6 @@
 {
   "name": "@domoapps/eslint-config",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "src/index.js",
   "sideEffects": false,
   "repository": "git@github.com:DomoApps/eslint-config.git",
