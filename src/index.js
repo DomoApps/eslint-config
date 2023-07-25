@@ -2,18 +2,17 @@
 
 module.exports = {
   plugins: ['prettier', '@typescript-eslint', 'react'],
-  parser:  '@typescript-eslint/parser',  // Specifies the ESLint typescript parser
-  extends:  [
-  ],
-  parserOptions:  {
-    ecmaVersion:  2018,  // Allows for the parsing of modern ECMAScript features
-    sourceType:  'module',  // Allows for the use of imports
-    ecmaFeatures:  {
-      jsx:  true,  // Allows for the parsing of TSX
+  parser: '@typescript-eslint/parser', // Specifies the ESLint typescript parser
+  extends: [],
+  parserOptions: {
+    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
+    sourceType: 'module', // Allows for the use of imports
+    ecmaFeatures: {
+      jsx: true, // Allows for the parsing of TSX
     },
     project: './tsconfig.json',
   },
-  rules:  {
+  rules: {
     // prettier
     'prettier/prettier': 'error',
     // non-formatting related AirBnB rules
@@ -28,13 +27,13 @@ module.exports = {
     'no-duplicate-imports': 'error',
     'one-var': ['error', 'never'],
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
-    'eqeqeq': 'error',
+    eqeqeq: 'error',
     '@typescript-eslint/strict-boolean-expressions': 'error',
-    'brace-style': ['error', '1tbs', { "allowSingleLine": true }],
+    'brace-style': ['error', '1tbs', { allowSingleLine: true }],
     'no-else-return': 'error',
     'spaced-comment': 'error',
     'no-new-wrappers': 'error',
-    'radix': 'error',
+    radix: 'error',
     'no-shadow-restricted-names': 'error',
     '@typescript-eslint/no-this-alias': 'error',
 
@@ -61,14 +60,11 @@ module.exports = {
           Array: 'Use [] instead',
           String: 'Use string instead',
           Number: 'Use number instead',
-        }
-      }
+        },
+      },
     ],
     '@typescript-eslint/no-empty-interface': 'error',
-    '@typescript-eslint/no-namespace': [
-      'error',
-      { allowDeclarations: true },
-    ],
+    '@typescript-eslint/no-namespace': ['error', { allowDeclarations: true }],
     '@typescript-eslint/no-non-null-assertion': 'error',
     '@typescript-eslint/no-require-imports': 'error',
     '@typescript-eslint/prefer-for-of': 'error',
@@ -122,13 +118,12 @@ module.exports = {
     'new-parens': 'error',
     // TODO: when released, enable this rule
     // '@typescript-eslint/consistent-type-assertions': ['error', { assertionStyle: 'as' }],
-    '@typescript-eslint/no-parameter-properties': 'error',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
     'no-floating-decimal': 'error',
   },
-  settings:  {
-    react:  {
-      version:  'detect',  // Tells eslint-plugin-react to automatically detect the version of React to use
+  settings: {
+    react: {
+      version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
     },
   },
 };
