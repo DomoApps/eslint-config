@@ -72,11 +72,6 @@ module.exports = {
     'guard-for-in': 'error',
     '@typescript-eslint/naming-convention': [
       'error',
-      // The `@typescript-eslint/naming-convention` rule allows `leadingUnderscore` and `trailingUnderscore` settings. However, the existing `no-underscore-dangle` rule already takes care of this.
-      {
-        selector: 'default',
-        format: ['camelCase'],
-      },
       // Airbnb recommends PascalCase for classes (23.3), and although Airbnb does not make TypeScript recommendations, we are assuming this rule would similarly apply to anything "type like", including interfaces, type aliases, and enums.
       {
         selector: 'typeLike',
