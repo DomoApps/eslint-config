@@ -1,6 +1,6 @@
 {
   "name": "@domoapps/eslint-config",
-  "version": "1.2.3",
+  "version": "2.0.0",
   "main": "src/index.js",
   "sideEffects": false,
   "repository": "git@github.com:DomoApps/eslint-config.git",
@@ -11,12 +11,12 @@
     "test:watch": "yarn run test"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.1.0",
-    "@typescript-eslint/parser": "^3.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
+    "@typescript-eslint/parser": "^8.1.0",
     "eslint": "*",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
     "prettier": "*"
   }
 }

@@ -52,17 +52,9 @@ module.exports = {
     '@typescript-eslint/member-ordering': 'error',
     'max-classes-per-file': ['error', 1],
     '@typescript-eslint/adjacent-overload-signatures': 'error',
-    '@typescript-eslint/ban-types': [
-      'error',
-      {
-        types: {
-          Object: 'Use {} instead',
-          Array: 'Use [] instead',
-          String: 'Use string instead',
-          Number: 'Use number instead',
-        },
-      },
-    ],
+    "@typescript-eslint/no-unsafe-function-type": "error",
+    "@typescript-eslint/no-empty-object-type": "error",
+    "@typescript-eslint/no-wrapper-object-types": "error",
     '@typescript-eslint/no-empty-interface': 'error',
     '@typescript-eslint/no-namespace': ['error', { allowDeclarations: true }],
     '@typescript-eslint/no-non-null-assertion': 'error',
